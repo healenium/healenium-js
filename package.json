@@ -1,0 +1,20 @@
+{
+  "name": "healenium-js",
+  "version": "1.0.0",
+  "description": "Wrapper for selenium WebDriver js",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "healenium",
+    "selenium",
+    "wait",
+    "wrapper"
+  ],
+  "devDependencies": {
+    "selenium-webdriver": "latest",
+    "@types/selenium-webdriver": "^4.1.21"
+  }
+}
