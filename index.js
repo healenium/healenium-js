@@ -33,7 +33,6 @@ async function setWaitFlag(driver, url, isWait) {
             if (!response.ok) {
                 throw new Error("HTTP error " + response.status);
             }
-            return response.json();
         })
         .catch(function (error) {
             console.error('An error occurred while fetching:', error);
