@@ -19,14 +19,12 @@ async function setWaitFlag(driver, url, isWait) {
     await driver.getSession().then(r => {
         sessionId = r.getId()
     });
-    let params = new URLSearchParams({
-        isWait: isWait
-    });
-    fetch(`${url}/session/${sessionId}/healenium/params?${params}`, {
-        method: "GET",
+    fetch(`${url}/session/${sessionId}/healenium/params`, {
+        method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
+        body: JSON.stringify({isWait: isWait})
     })
         .then(response => {
             if (!response.ok) {
