@@ -22,7 +22,7 @@ async function setWaitFlag(driver, url, isWait) {
     let params = new URLSearchParams({
         isWait: isWait
     });
-    fetch(`${url}/healenium/${sessionId}/params?${params}`, {
+    fetch(`${url}/healenium/${sessionId}/healenium/params?${params}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
